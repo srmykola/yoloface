@@ -238,7 +238,7 @@ def detect_video(model, video_path=None, output=None):
                 cv2.putText(result, text, (10, (i * 20) + 20),
                             cv2.FONT_HERSHEY_SIMPLEX, 0.3, (10, 175, 0), 1)
 
-            cv2.namedWindow("face", cv2.WINDOW_NORMAL)
+            # cv2.namedWindow("face", cv2.WINDOW_NORMAL)
             # cv2.imshow("face", result)
             if isOutput:
                 out.write(result)
@@ -248,6 +248,6 @@ def detect_video(model, video_path=None, output=None):
             break
     vid.release()
     out.release()
-    cv2.destroyAllWindows()
+    # cv2.destroyAllWindows()
     # close the session
     model.close_session()

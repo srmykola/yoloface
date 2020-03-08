@@ -67,7 +67,7 @@ net.setPreferableTarget(cv2.dnn.DNN_TARGET_CPU)
 
 def _main():
     wind_name = 'face detection using YOLOv3'
-    cv2.namedWindow(wind_name, cv2.WINDOW_NORMAL)
+    # cv2.namedWindow(wind_name, cv2.WINDOW_NORMAL)
 
     output_file = ''
 
@@ -103,7 +103,7 @@ def _main():
         if not has_frame:
             print('[i] ==> Done processing!!!')
             print('[i] ==> Output file is stored at', os.path.join(args.output_dir, output_file))
-            cv2.waitKey(1000)
+            # cv2.waitKey(1000)
             break
 
         # Create a 4D blob from a frame.
@@ -145,7 +145,7 @@ def _main():
             break
 
     cap.release()
-    cv2.destroyAllWindows()
+    # cv2.destroyAllWindows()
 
     print('==> All done!')
     print('***********************************************************')
